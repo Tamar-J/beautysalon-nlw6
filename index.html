@@ -12,37 +12,112 @@
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
 
         <!-- STYLES CSS -->
-        <link rel="stylesheet" href="./styles/index.css">
+        <link rel="stylesheet" href="./styles/icons.css">
+        <link rel="stylesheet" href="./styles/style.css">
     </head>
     <body>
         <div class="content">
+            <!-- HEADER -->
             <header id="header">
                 <nav class="container">
                     <a class="logo" href="#">beauty<span>salon</span>.</a>
-                    <div class="menu"><img src="./imgs/menu.svg" alt="menu"></div>
+                    
+                    <!-- MENU -->
+                    <div class="menu">
+                        <ul class="grid">
+                            <li><a class="title" href="#home">Início</a></li>
+                            <li><a class="title" href="#about">Sobre</a></li>
+                            <li><a class="title" href="#services">Serviços</a></li>
+                            <li><a class="title" href="#testimonials">Depoimentos</a></li>
+                            <li><a class="title" href="#contact">Contato</a></li>
+                        </ul>
+                    </div><!-- /MENU -->
+                    <i class="toggle icon-menu"></i>
+                    <i class="toggle icon-close"></i>
                 </nav>
             </header>
-            
+            <!-- MAIN -->
             <main>
                 <section class="section" id="home">
                     
                     <div class="container grid">
                         <div class="image">
-                            <img src="./imgs/hairdresser.svg" alt="Mulher sorrindo e escovando o cabelo da cliente">
+                            <img src="./assets/imgs/hairdresser.svg" alt="Mulher sorrindo e escovando o cabelo da cliente">
                         </div>
 
                         <div class="text">
-                            <h1>Saúde natural para os seus cabelos</h1>
+                            <h2 class="title">Saúde natural para os seus cabelos</h2>
                             <p>Um salão exclusivo em São Paulo, especializado em tratamentos naturais.</p>
                             <a href="#" class="button">Agendar um horário</a>
                         </div>
 
                     </div>
                 </section>
+                <!-- DIVISOR -->
+                <div class="divisor-1"></div>
+            
+                <!-- ABOUT SECTION -->
+                <section class="section" id="about">
+                    <div class="container grid">
+                        <div class="image">
+                            <img src="./assets/imgs/hairdressers.svg" alt="3 cabeleireiras sorrindo com seus equipamentos do salão">
+                        </div>
 
+                        <div class="text">
+                            <h2 class="title">Sobre nós</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora nobis aut minima adipisci reiciendis, architecto nemo voluptatibus, doloribus iure alias quae cumque corporis accusamus. Enim obcaecati consequuntur dicta nemo tempora?</p>
+                            
+                            <p><br>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora nobis aut minima adipisci reiciendis, architecto nemo voluptatibus, doloribus iure alias quae cumque corporis accusamus. Enim obcaecati consequuntur dicta nemo tempora?</p>
+                            
+                            <p><br>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora nobis aut minima adipisci reiciendis, architecto nemo voluptatibus, doloribus iure alias quae cumque corporis accusamus. Enim obcaecati consequuntur dicta nemo tempora?</p>
+                        </div>
+                    </div>
+                </section>
+                <!-- DIVISOR -->
+                <div class="divisor-2"></div>
+
+                <!-- SERVICES SECTION -->
+                <section class="section" id="services">
+                    <div class="container grid">
+                        <header>
+                            <div class="text">
+                                <h2 class="title">Serviços</h2>
+                                <p>Com mais de 10 anos no mercado, o <strong>Beautysalon</strong> já conquistou clientes de inúmeros países com seus tratamentos exclusivos e totalmente naturais</p>
+                            </div>
+                        </header>
+                        <div class="cards grid">
+                            <div class="card">
+                                <i class="icon-woman-hair"></i>
+                                <h3 class="title">Terapia capilar</h3>
+                                <p>Terapia completa para couro cabeludo e fios, protegendo todos os tipos de cabelos, inclusive os longos e finos.</p>
+                            </div>
+                            <div class="card">
+                                <i class="icon-trim"></i>
+                                <h3 class="title">Cortes</h3>
+                                <p>A nossa equipe é repleta de profissionais renomados, famosos por lançarem tendências com cortes diferenciados e clássicos.</p>
+                            </div>
+                            <div class="card">
+                                <i class="icon-cosmetic"></i>
+                                <h3 class="title">Tratamentos</h3>
+                                <p>O beautysalon conta com diversos tratamentos naturais e totalmente veganos, para qualquer tipo de cabelo.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- DIVISOR -->
                 <div class="divisor-1"></div>
 
+                <!-- TESTIMONIALS SECTION -->
+                <section class="section" id="testimonials">
+                    <div class="container grid">Depoimentos</div>
+                </section>
+
+                <!-- CONTACT SECTION -->
+                <section class="section" id="contact">
+                    <div class="container grid">Contato</div>
+                </section>
             </main>
         </div>
+        <script src="./scripts/main.js"></script>
      </body>
 </html>
