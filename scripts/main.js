@@ -26,3 +26,31 @@ window.addEventListener('scroll', function() {
         header.classList.remove('scroll')
     }
 })
+
+/* SWIPER */
+const swiper = new Swiper('.swiper-container', {
+    slidesPerView: 1,
+    pagination: {
+        el: '.swiper-pagination'
+    },
+    mousewheel: true,
+    Keyboard: true
+
+  });
+
+  /* SCROLL REVEAL */
+
+  const scrollReveal = ScrollReveal({
+      origin: 'top',
+      distance: '30px',
+      duration: 700,
+      reset: true
+  })
+
+  scrollReveal.reveal(`
+    #home .text, #home .image,
+    #about .text, #about .image,
+    #services header, #services .card,
+    #testimonials header, #testimonials .testimonials,
+    #contact .text, #contact .links
+    `, { interval: 100 })

@@ -12,7 +12,11 @@
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@700;800&display=swap" rel="stylesheet">
 
         <!-- STYLES CSS -->
+        <!-- Icons -->
         <link rel="stylesheet" href="./styles/icons.css">
+        <!-- SWIPER JS -->
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+        <!-- Main style -->
         <link rel="stylesheet" href="./styles/style.css">
     </head>
     <body>
@@ -109,15 +113,89 @@
 
                 <!-- TESTIMONIALS SECTION -->
                 <section class="section" id="testimonials">
-                    <div class="container grid">Depoimentos</div>
+                    <div class="container">
+                        <header>
+                            <h2 class="title">Depoimentos de quem já passou por aqui</h2>
+                        </header>
+                        <div class="testimonials swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="testimonial swiper-slide">
+                                    <blockquote>
+                                        <p><span>&ldquo;</span>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur assumenda qui magnam nam laborum accusamus inventore corrupti fuga, necessitatibus cupiditate dolorum repellendus, tempore nisi non temporibus.
+                                        </p>
+                                        <cite>
+                                            <img src="./assets/imgs/user50.jpg" alt="Foto de Andreza Lima">
+                                            Andreza Lima
+                                        </cite>
+                                    </blockquote>
+                                </div>
+                                <div class="testimonial swiper-slide">
+                                    <blockquote>
+                                        <p><span>&ldquo;</span>
+                                            Eu sou cliente do Beautysalon há 5 anos e não troco por nada! Certamente meu cabelo mudou muito depois que comecei a tratar somente com produtos naturais e veganos. São profissionais incríveis e qualificados.
+                                        </p>
+                                        <cite>
+                                            <img src="./assets/imgs/user56.jpg" alt="Foto de Vanessa Souza">
+                                            Vanessa Souza
+                                        </cite>
+                                    </blockquote>
+                                </div>
+                                <div class="testimonial swiper-slide">
+                                    <blockquote>
+                                        <p><span>&ldquo;</span>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora sint cupiditate minima molestiae repellendus, accusantium saepe corporis quibusdam, facere perspiciatis, exercitationem possimus.
+                                        </p>
+                                        <cite>
+                                            <img src="./assets/imgs/user76.jpg" alt="Foto de Julia Roberts">
+                                            Julia Roberts
+                                        </cite>
+                                    </blockquote>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
                 </section>
 
+                <!-- DIVISOR -->
+                <div class="divisor-2"></div>
                 <!-- CONTACT SECTION -->
                 <section class="section" id="contact">
-                    <div class="container grid">Contato</div>
+                    <div class="container grid">
+                        <div class="text">
+                            <h2 class="title">Entre em contato com a gente!</h2>
+                            <p>Entre em contato com a Beautysalon, queremos tirar suas dúvidas, ouvir suas críticas e sugestões.</p>
+                            <a 
+                                href="https://api.whatsapp.com/send?phone=551199845-6754&text=Olá! Gostaria de agendar um horário" 
+                                target="_blank"
+                                class="button"
+                                ><i class="icon-whatsapp"></i>
+                                Entrar em contato
+                            </a>
+                        </div>
+
+                        <div class="links">
+                            <ul class="grid">
+                                <li><i class="icon-phone"></i>11 99845-6754</li>
+                                <li><i class="icon-map-pin"></i>R. Amauri Souza, 346</li>
+                                <li><i class="icon-mail"></i>contato@beautysalon.com</li>
+                            </ul>
+                        </div>
+
+                    </div>
                 </section>
+
+                <!-- DIVISOR -->
+                <div class="divisor-1"></div>
             </main>
+
+                <!-- FOOTER -->
         </div>
+
+        <!-- SCRIPTS -->
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
         <script src="./scripts/main.js"></script>
      </body>
 </html>
