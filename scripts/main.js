@@ -1,10 +1,10 @@
 /* SELECTORS */
-const header =  document.querySelector('#header')
+
 const nav =     document.querySelector('#header nav')
 const toggles = document.querySelectorAll('#header nav .toggle')
 const links =   document.querySelectorAll('header nav ul li a')
 
-const navHeight = header.offsetHeight // GET THE HEIGHT OF NAV
+
 
 /* MENU SHOW TOGGLE */
 for (const toggle of toggles) {
@@ -18,14 +18,6 @@ for(link of links){
     })
 }
 
-/* PAGE SCROLL CHANGE */
-window.addEventListener('scroll', function() {
-    if(window.scrollY >= navHeight) {
-        header.classList.add('scroll')
-    } else {
-        header.classList.remove('scroll')
-    }
-})
 
 /* SWIPER */
 const swiper = new Swiper('.swiper-container', {
@@ -36,21 +28,50 @@ const swiper = new Swiper('.swiper-container', {
     mousewheel: true,
     Keyboard: true
 
-  });
+});
 
   /* SCROLL REVEAL */
-
-  const scrollReveal = ScrollReveal({
+const scrollReveal = ScrollReveal({
       origin: 'top',
       distance: '30px',
       duration: 700,
       reset: true
   })
 
-  scrollReveal.reveal(`
+scrollReveal.reveal(`
     #home .text, #home .image,
     #about .text, #about .image,
     #services header, #services .card,
     #testimonials header, #testimonials .testimonials,
-    #contact .text, #contact .links
+    #contact .text, #contact .links,
+    footer .brand, footer .social
     `, { interval: 100 })
+
+/* PAGE SCROLL CHANGE */
+function pageScrollTransition() {
+    const header =  document.querySelector('#header')
+    const navHeight = header.offsetHeight // GET THE HEIGHT OF NAV
+    
+    if(window.scrollY >= navHeight) {
+        header.classList.add('scroll')
+    } else {
+        header.classList.remove('scroll')
+    }
+}
+
+/* BACK TO TOP */
+function backToTop(){       
+    const backToTopButton = document.querySelector('.back-to-top')
+    
+    if (window.scrollY >= 600) {
+        backToTopButton.classList.add('show')
+    }else {
+        backToTopButton.classList.remove('show')
+    }
+}
+
+/* WHEN SCROLLING */
+window.addEventListener('scroll', function() {
+    pageScrollTransition()
+    backToTop()
+})
