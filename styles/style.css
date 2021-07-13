@@ -22,7 +22,11 @@
 
     /* FONT SIZES */
     --title-size: 3rem;
+    --subtitle-size: 1.6rem;
     --normal-size: 1.6rem;
+
+    /* SIZES */
+    --header-height: 7.2rem;
 }
 
 /* BASE */
@@ -41,21 +45,25 @@ img{
     height: auto;
 }
 
+p{
+    font: 400 1.6rem 'DM Sans', sans-serif;
+    color: var(--gray);
+}
+
 .title{
     font: 700 var(--title-size) 'Poppins', sans-serif;
     color: var(--green-dark);
     -webkit-font-smoothing: auto;
 }
 
-p{
-    font: 400 var(--normal-size) 'DM Sans', sans-serif;
-    color: var(--gray);
+.subtitle{
+    font-size: var(--subtitle-size);
 }
 
 .button{
     display: inline-flex;
     align-items: center;
-    font: 500 var(--normal-size) 'DM Sans', sans-serif;
+    font: 500 1.6rem 'DM Sans', sans-serif;
     background: var(--green);
     color: var(--white-b);
     height: 5.6rem;
@@ -126,7 +134,8 @@ header nav ul li a{
     position: relative;
     transition: color .2s;
 }
-header nav ul li a:hover{
+header nav ul li a:hover,
+header nav ul li a.active{
     color: var(--green);
 }
 
@@ -143,7 +152,8 @@ header nav ul li a::after{
     transition: width 0.2s;
 }
 
-header nav ul li a:hover::after{
+header nav ul li a:hover::after,
+header nav ul li a.active::after{
     width: 100%;
 }
 /* MENU */
@@ -212,7 +222,6 @@ header nav.show .icon-close{
 
 main{
     overflow-x: hidden;
-    margin-top: 7.2rem;
 }
 
 .container{
@@ -226,7 +235,7 @@ main{
 }
 
 .section{
-    padding: 6.8rem 0;
+    padding: calc(6.8rem + var(--header-height)) 0;
 }
 
 .section .title{
@@ -236,7 +245,6 @@ main{
 /* HOME */
 
 #home{
-    display: flex;
     overflow-x: hidden;
 }
 
@@ -247,16 +255,17 @@ main{
 #home .image{
     position: relative;
     z-index: 0;
+   /*  width: 100%; */
 }
 
 #home .image::before{
     position: absolute;
     content: "";
     height: 107.14%;
-    width: 92.9vw;
+    width: 106%;
     background: var(--green-light);
     top: -16.05%;
-    left: 10.13vw;
+    left: 13.7%;;
     
     border-radius: .4rem;
     z-index: -1;
@@ -286,7 +295,6 @@ main{
 
 #about{
     background-color: var(--white-b);
-    padding-top: calc(6.8rem + 3.34rem);
 }
 
 #about .container{
@@ -306,8 +314,7 @@ main{
     background: var(--green-light);
     top: -8%;
     left: 0;
-    
-    box-shadow: 1px 5px 3px rgb(0, 0, 0, 0.2);
+
     border-radius: .4rem;
     z-index: -1;
 }
@@ -331,11 +338,16 @@ main{
 /* SERVICES */
 
 #services header{
-    margin-bottom: 4rem;
+    margin-bottom: 6.4rem;
 }
 
+#services header .subtitle{
+    color: var(--green-dark);
+}
+
+
 #services header strong{
-    font: 700 var(--normal-size) 'DM Sans', sans-serif;
+    font: 700 var(--subtitle-size) 'DM Sans', sans-serif;
     color: var(--green);
 }
 
@@ -468,6 +480,10 @@ footer {
     background: var(--green);
 }
 
+footer.section{
+    padding: 6.4rem 0;
+}
+
 footer .logo{
     display: inline-flex;
     margin-bottom: 2.4rem;
@@ -529,12 +545,161 @@ footer .social i,
 
 /* MEDIA QUERIES */
 /* Extra Large Devices: 1200 >  */
+@media (min-width: 1200px) {
+
+    .container{
+        max-width: 1120px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .section{
+        padding: 16rem 0;
+    }
+
+    .section header,
+    #testimonials header{
+        max-width: 51.2rem;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .button{
+        height: 5rem;
+    }
+
+    header nav .menu{
+        opacity: 1;
+        visibility: visible;
+        top: 0;
+    }
+
+    header nav .menu ul{
+        display: flex;
+        gap: 3.2rem;
+    }
+
+    header nav .menu ul li a.title{
+        font: 400 1.6rem "DM Sans",sans-serif;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    header nav .menu ul li a.title.active{
+        color: var(--green);
+        font-weight: bold;
+        -webkit-font-smoothing: auto;
+    }
+
+    header nav .icon-menu{
+        display: none;
+    }
+
+    main{
+        margin-top: var(--header-height);
+    }
+
+    #home .container{
+        grid-auto-flow: column;
+        justify-content: space-between;
+        margin: 0 auto;
+        gap: 11.8rem;
+    }
+
+    #home .image::before{
+        height: 100%;
+        width: 100%;
+
+        /* top: -16.05%;
+        left: 10.13vw; */
+    }
+
+    #home .image{
+        order: 1;
+        width: 56.1rem;
+        height: 106.4%;
+    }
+
+    #home .image img{
+        margin-left: 0;
+        width: 100%;
+        /* width: 167.5%; */
+    }
+
+    #home .text{
+        order: 0;
+        margin: 0;
+        max-width: 39.3rem;
+        text-align: left;
+    }
+
+    
+    #about .container{
+        margin: 0 auto;
+        grid-auto-flow: column;
+    }
+    
+    #about .image{
+        width: 130%;
+        left: -30%;
+    }
+
+    #about .image::before{
+        width: 100%;
+        height: 100%;
+        left: -30%;
+    }
+
+    #services .cards{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #services .cards .card{
+        padding-left: 4.8rem;
+        padding-right: 4.8rem;
+
+    }
+
+    #testimonials .container{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #contact .container{
+        grid-auto-flow: column;
+        align-items: center;
+    }
+
+    #contact .text{
+        max-width: 40rem;
+    }
+
+    footer.section{
+        padding: 6rem 0;
+    }
+
+    footer .container{
+        grid-auto-flow: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    footer .brand a.logo,
+    footer .brand a.logo span{
+        font-size: var(--title-size);
+    }
+
+
+}
+
+
 /* Extra Large Devices: 1023 >  */
 /* Extra Large Devices: 992 >  */
 
 @media (min-width: 992px) {
     :root{
-        --title-size: 3.5rem;
+        --title-size: 3.6rem;
+        --subtitle-size: 1.8rem;
     }
 }
 
